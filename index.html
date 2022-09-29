@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini juego con JQuery </title>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css">
+  
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/funciones.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min,js"></script>
+
+
+    <style>
+        body {
+            background-image: url(images/fondo.png);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <font color="white">
+        <div class="container" >
+            <div class="row">
+                <div class="col-8">
+                    <br>
+                    <h6>UNIVERSIDAD DE NARIÑO EXTENSIÓN IPIALES</h6>
+                    <h6>DESARROLLADO POR:</h6>
+                    <h6>IVAN CAMILO MEJIA PARRA</h6>
+                    <h6>CHRISTIAN CAMILO VIDAL ORTIZ</h6>
+                </div>
+                <div class="col-4">
+                    <img heigth="100" width="100"src="images\udenar.png" alt="No hay imagen" >
+                </div>
+            </div>
+        </div>
+        <br>
+    </font>     
+    <div class="divisor"></div>
+
+    <div id="contenedorp" class="container, col-12" ><!--inicio contenedor principal-->
+        <div class="row">
+            <center>
+                <div class="col-10">
+                    <div class="card border-info" >
+                        <div class="card-body" >
+                            <h4>MINI FUTBOL</h4>
+                            <ul class="list-group list-group-light">
+                                <li class="list-group-item">  
+                                    <table bgcolor=#47CF31 width="952"  border="5">
+                                        <tr>
+                                            <td border="5"  bgcolor=#47CF31 align="center" width="100">
+                                                <div for="txt_nombre"><b>Jugadores</b>
+                                                    <div class="toggler">
+                                                        <div id="effect" class="ui-corner-all">
+                                                            <p>
+                                                                Jugador 1:
+                                                              <input type="text" name="txt_nombre" id="txt_nombre" >
+                                                            </p>
+                                                            <p>
+                                                                Jugador 2:
+                                                              <input type="text" name="txt_nombre" id="txt_nombre" >
+                                                            </p>
+                                                        </div>
+                                                    </div>   
+                                                    <button id="button" class="ui-state-default ui-corner-all">Run Effect</button>       
+                                                </div>
+                                            </td>
+                                            <td border="5"  bgcolor=#47CF31>
+                                               <table align="center" bgcolor="white" border="2">
+                                                    <tr>
+                                                        <td colspan="2" bgcolor= #C4E2F1 border="2"> <h1>MARCADOR</h1> </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td  bgcolor= "white" border="2">
+                                                            <h6><b>JUGADOR 1</b></h6> 
+                                                        </td>
+                                                        <td  bgcolor= "white" border="2"> 
+                                                            <h6><b>JUGADOR 2</b></h6> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr align="center">
+                                                        <td rowspan="2" bgcolor= #C4E2F1> 
+                                                            <input style="width : 60px; background-color:transparent;  color:red;" placeholder="____" type="number" name="inp_No" id="inp_No"min= "0" max="999">
+                                                        </td>
+                                                        <td rowspan="2" bgcolor= #C4E2F1> 
+                                                            <input style="width : 60px; background-color:transparent;  color:red;" placeholder="____" type="number" name="inp_No" id="inp_No"min= "0" max="999">
+                                                        </td>
+                                                    </tr>
+                                                </table>         
+                                            </td>
+                                        </tr>
+                                    </table>   
+                                </li>
+                                 <li class="list-group-item">  
+                                   <table style="background-image: url(images/cancha.png);" bgcolor=#47CF31 width="952" height="400" border="5">
+                                       <tr>
+                                            <td>
+                                               <div style="background-color:transparent" id="contenedor3" class="ui-widget-header">
+                                                    
+                                                    <img heigth="200" width="200"src="images\porteria2.png" alt="No hay porteria">
+                                                    <b><p>JUGADOR 1</p></b>
+                                                </div>
+                                           </td>
+                                            <td align="center">
+                                               <div style="background-color:transparent" id="contenedor2" class="ui-widget-content">
+                                                    <img heigth="100" width="100"src="images\balon.png" alt="No hay balon">
+                                                </div>
+                                           </td>
+                                           <td width="100" align="right">
+                                                <div style="background-color: transparent;" id="contenedor4" class="ui-widget-header">
+                                                    
+                                                    <img heigth="200" width="200"src="images\porteria1.png" alt="No hay porteria">
+                                                    <b><p>JUGADOR 2</p></b>
+                                                </div>
+                                           </td>
+                                       </tr>
+                                   </table>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </div>  <!--fin contenedor principal-->
+       
+
+
+        <!--<div style="background-color:transparent" id="contenedor2" class="ui-widget-content">
+     
+              <img heigth="140" width="140"src="images\balon.png" alt="No hay balon">
+        </div>
+
+        <div id="contenedor3" class="ui-widget-header">
+            <p>Drop here</p>
+            <img heigth="200" width="200"src="images\porteria.png" alt="No hay porteria">
+        </div>
+
+        <div id="contenedor4" class="ui-widget-header">
+            <p>Drop here</p>
+            <img heigth="200" width="200"src="images\porteria.png" alt="No hay porteria">
+        </div>
+    
+
+        <p>
+          <label for="spinner">Select a value:</label>
+          <input id="spinner" name="value">
+        </p>
+
+        <p>
+          <button id="disable">Toggle disable/enable</button>
+          <button id="destroy">Toggle widget</button>
+        </p>
+
+        <p>
+          <button id="getvalue">Get value</button>
+          <button id="setvalue">Set value to 5</button>
+        </p>
+    </div>-->
+<!--
+    <div id="contenedorp" class="container, col-12">
+
+        <div style="background-color:transparent" id="contenedor2" class="ui-widget-content">
+            <img heigth="140" width="140"src="images\balon.png" alt="No hay balon">
+        </div>
+
+        
+
+        <div style="background-color:transparent" id="contenedor3" class="ui-widget-header">
+             <img heigth="200" width="200"src="images\porteria.png" alt="No hay porteria">
+        </div>
+    </div>
+
+    <div class="toggler">
+    <div id="effect" class="ui-corner-all">
+          Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+    </div>
+    </div>
+     
+    <button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+     
+-->
+<script type="text/javascript" src="js/funciones.js"></script>
+</body>
+
+</html>
